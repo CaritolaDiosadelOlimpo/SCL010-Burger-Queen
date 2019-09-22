@@ -31,3 +31,26 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  text-decoration: none;
+}
+
+li{
+  margin: 1vh;
+  padding: 1vh;
+  list-style-type: none;
+}
+
+.menu li{
+  margin:1vh;
+  padding: 1vh;
+  display: inline;
+}
+
+.menu li a{
+  padding: 1vh;
+  border: 1px solid black;
+  width: auto;
+  border-radius: 9%;
+}
