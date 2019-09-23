@@ -1,20 +1,20 @@
 import React from 'react';
 import '../App.css';
-import { browserRouter as Router, Route, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
-function Projects() {
+function Projects({ match }) {
     return(
         <Router>
 
     <ul>
         <li>
-            <link to={`${match.url}/a-project`}> A project</link>
+            <Link to={`${match.url}/a-project`}> A project</Link>
             </li>
         <li>
-            <link to= {`${match.url}/another-project`}>Another project</link> 
+            <Link to= {`${match.url}/another-project`}>Another project</Link> 
         </li>
         <li>
-            <link to= {`${match.url}/other-component`}>Other component</link> 
+            <Link to= {`${match.url}/other-component`}>Other component</Link> 
         </li>
     </ul>
     

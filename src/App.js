@@ -9,28 +9,28 @@ import Projects from './components/Projects';
 
 function App() {
   return (
-  <Route>
+  <Router>
    <div className = "App">
      <ul>
        <li>
-         <link to = "/home">Home</link>
+         <Link to = "/home">Home</Link>
          </li>
        <li>
-         <link to = "/about">About</link>
+         <Link to = "/about">About</Link>
          </li>
        <li>
-         <link to = "/projects">Projects</link>
+         <Link to = "/projects">Projects</Link>
          </li>
      </ul>
     
 
-     <Router exact path="/home" component={ Home }/>
-     <Router path = "/about" component = { About} />
-     <Router path= "/projects" component = { Projects} />
+     <Route exact path="/home" component={ Home }/>
+     <Route path = "/about" component = { About} />
+     <Route path= "/projects" component = { Projects} />
       
 
     </div>
-  </Route>
+  </Router>
   );
 }
 
