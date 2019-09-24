@@ -1,36 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+//importando los componentes
 import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
+import Menu from './components/Menu';
+import OrdersReady from './components/OrdersReady';
+import OrdersRecords from './components/OrdersRecords';
+import OrdesInKitchen from './components/OrdesInKitchen';
+
 
 function App() {
   return (
-  <Router>
-   <div className = "App">
-     <ul>
-       <li>
-         <Link to = "/home">Home</Link>
-         </li>
-       <li>
-         <Link to = "/about">About</Link>
-         </li>
-       <li>
-         <Link to = "/projects">Projects</Link>
-         </li>
-     </ul>
-    
-
-     <Route exact path="/home" component={ Home }/>
-     <Route path = "/about" component = { About} />
-     <Route path= "/projects" component = { Projects} />
-      
-
-    </div>
-  </Router>
+    <Router>
+      <div>
+        <ul className='home'>
+          <li>
+            <Link to="/">INICIO</Link>
+          </li>
+          <li>
+            <Link to="/menu">MENU</Link>
+          </li>
+          <li>
+            <Link to="/ordesinkitchen">COCINA</Link>
+          </li>
+          <li>
+            <Link to="/ordersready">LISTO</Link>
+          </li>
+          <li>
+            <Link to="/ordersrecords">HISTOPED</Link>
+          </li>
+        </ul>
+        <hr/>
+        <Route exact path="/" component={Home}/>
+        <Route path="/menu" component={Menu}/>
+        <Route path="/ordesinkitchen" component={OrdesInKitchen}/>
+        <Route path="/ordersready" component={OrdersReady}/>
+        <Route path="/ordersrecords" component={OrdersRecords}/>
+      </div>
+    </Router>
   );
 }
 
