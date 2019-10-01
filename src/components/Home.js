@@ -1,14 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-<<<<<<< HEAD
-function Home(){
-    return(
-        <div>
-            <h2>Home</h2>
-        </div>
-    );
-=======
+            
 class Home extends React.Component {
   render() { 
     return ( 
@@ -17,7 +10,7 @@ class Home extends React.Component {
       </div>
      );
   }
->>>>>>> master
+
 }
 
 export default Home;
