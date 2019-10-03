@@ -17,21 +17,21 @@
 =======
 import React from 'react';
 import Button from '@material-ui/core/Button';
-//import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import { menu } from '../../data/menu.json';
+import { burgers, sideDishes, drinks } from '../../data/menu.json';
 
 export default class Lunch extends React.Component {
   constructor() {
     super();
     this.state = {
-      burger: menu.burgers,
-      sideDish: menu.sideDishs,
-      drink: menu.drinks,
+      burger: burgers,
+      sideDish: sideDishes,
+      drink: drinks,
     }
   }
 >>>>>>> f9647e976d0eed63c80feadeedcf109e573679d1
 
+<<<<<<< HEAD
 //   //f(x) que captura el nombre de la opción seleccionada
 //   select = (e) => {
 //     console.log(e.target.value);
@@ -86,52 +86,70 @@ export default class Lunch extends React.Component {
 //   }
 // }
 =======
+=======
+>>>>>>> 8929fed286cd533bb17b24868148827327fab976
   render() { 
     const burgersOptions = this.state.burger.map((item) => {
       return (
         <Grid item xs>
-         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.addOrder.bind(this, item)} value={item.name}>
+          <Button 
+          variant="contained" 
+          color="#ffffff" 
+          key={item.id} 
+          onClick={this.props.addOrder.bind(this, item)} 
+          value={item.name}>
           {item.name}
           </Button>
-          </Grid>
+        </Grid>
         
       )
     })
-    const sideDishsOptions = this.state.sideDish.map((item, i) => {
+    const sideDishsOptions = this.state.sideDish.map((item) => {
       return (
         <Grid item xs>
-       <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.addOrder.bind(this, item)} value={item.name}>
+          <Button 
+          variant="contained" 
+          color="#ffffff" 
+          key={item.id} 
+          onClick={this.props.addOrder.bind(this, item)} 
+          value={item.name}>
           {item.name}
           </Button>
-          </Grid>
+        </Grid>
       )
     })
-    const drinksOptions = this.state.drink.map((item, i) => {
+    const drinksOptions = this.state.drink.map((item) => {
       return (
         <Grid item xs>
-        <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.addOrder.bind(this, item)} value={item.name}>
+          <Button 
+          variant="contained" 
+          color="#ffffff" 
+          key={item.id} 
+          onClick={this.props.addOrder.bind(this, item)} 
+          value={item.name}>
           {item.name}
           </Button>
-          </Grid>
+        </Grid>
       )
     })
     return ( 
       <div>
         <div>
-        <h3>Hamburgesas</h3>
-        <Grid container spacing={1}>{burgersOptions}</Grid>
+          <h3>Hamburgesas</h3>
+          <Grid container spacing={1}>{burgersOptions}</Grid>
         </div>
         <div>
-        <h3>Acompañamientos</h3>
-        <Grid container spacing={1}>{sideDishsOptions}</Grid> 
+          <h3>Acompañamientos</h3>
+          <Grid container spacing={1}>{sideDishsOptions}</Grid> 
         </div>
         <div>
-        <h3>Bebestibles</h3>
-        <Grid container spacing={1}>{drinksOptions}</Grid> 
+          <h3>Bebestibles</h3>
+          <Grid container spacing={1}>{drinksOptions}</Grid> 
         </div>
       </div>
      );
   }
+<<<<<<< HEAD
 }
 
 export const BtnOptions = (props) => {
@@ -142,3 +160,6 @@ export const BtnOptions = (props) => {
   )
 }
 >>>>>>> f9647e976d0eed63c80feadeedcf109e573679d1
+=======
+}
+>>>>>>> 8929fed286cd533bb17b24868148827327fab976
